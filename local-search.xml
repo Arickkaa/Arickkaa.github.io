@@ -11,6 +11,18 @@
     <content type="html"><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h1><h3 id="今天开始学Java，花了挺长时间配置完java环境后，我已经完成了我的第一行代码！"><a href="#今天开始学Java，花了挺长时间配置完java环境后，我已经完成了我的第一行代码！" class="headerlink" title="今天开始学Java，花了挺长时间配置完java环境后，我已经完成了我的第一行代码！"></a>今天开始学Java，花了挺长时间配置完java环境后，我已经完成了我的第一行代码！</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">HelloWorld</span>&#123;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span>&#123;<br>System.out.println(<span class="hljs-string">&quot;Hello World!&quot;</span>);<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><p><img src="https://img-blog.csdnimg.cn/4ad38e0f1fc94c1f9f397196e67c4a4d.jpeg" alt="Hello World"></p><h4 id="说实话，一点都不难有点难，和之前学的C语言差别好大，为什么一个print前面要加那么一串？前面的public-class和public-static是什么意思我都不知道。"><a href="#说实话，一点都不难有点难，和之前学的C语言差别好大，为什么一个print前面要加那么一串？前面的public-class和public-static是什么意思我都不知道。" class="headerlink" title="说实话，一点都不难有点难，和之前学的C语言差别好大，为什么一个print前面要加那么一串？前面的public class和public static是什么意思我都不知道。"></a>说实话，<del>一点都不难</del>有点难，和之前学的C语言差别好大，为什么一个print前面要加那么一串？前面的<code>public class</code>和<code>public static</code>是什么意思我都不知道。</h4><h4 id="Dysprosium给我第一周的任务是编写一个简单的四则运算计算器，我现在还需要的知识："><a href="#Dysprosium给我第一周的任务是编写一个简单的四则运算计算器，我现在还需要的知识：" class="headerlink" title="Dysprosium给我第一周的任务是编写一个简单的四则运算计算器，我现在还需要的知识："></a>Dysprosium给我第一周的任务是编写一个<em>简单的四则运算计算器</em>，我现在还需要的知识：</h4><blockquote><ul><li><input checked="" disabled="" type="checkbox"> 如何输出</li><li><input disabled="" type="checkbox"> 如何输入</li><li><input disabled="" type="checkbox"> 条件判断</li></ul></blockquote><h3 id="争取明天直接做出来！"><a href="#争取明天直接做出来！" class="headerlink" title="争取明天直接做出来！"></a>争取明天直接做出来！</h3>]]></content>
     
     
+    <categories>
+      
+      <category>日常记录</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java基础学习</tag>
+      
+    </tags>
     
   </entry>
   
