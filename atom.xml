@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-23T11:42:10.423Z</updated>
+  <updated>2022-08-23T14:49:11.777Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>异常</title>
+    <link href="http://example.com/2022/08/23/2022-08-23%E5%BC%82%E5%B8%B8/"/>
+    <id>http://example.com/2022/08/23/2022-08-23%E5%BC%82%E5%B8%B8/</id>
+    <published>2022-08-23T14:00:00.000Z</published>
+    <updated>2022-08-23T14:49:11.777Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p><strong>注：狂神的这节课讲的相当烂，看完了之后还是完全不明白是什么概念</strong></p><h3 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h3><p>软件程序在运行过程中，非常可能遇到异常问题，英文是：Exception，就是一些意外。</p><p>异常指程序运行中出现不期而至的各种情况，如：文件找不到、网络连接失败等</p><p>异常发生在成勋运行期间，它影响了正常程序的执行流程。</p><h3 id="简单分类"><a href="#简单分类" class="headerlink" title="简单分类"></a>简单分类</h3><h5 id="检查性异常："><a href="#检查性异常：" class="headerlink" title="检查性异常："></a>检查性异常：</h5><p>最具代表的检查性异常时用户错误或问题引起的异常，时程序员无法预见的</p><h5 id="运行时异常："><a href="#运行时异常：" class="headerlink" title="运行时异常："></a>运行时异常：</h5><p>时可能被程序员避免的异常，运行异常可以在编译时被忽略</p><h5 id="错误ERROR："><a href="#错误ERROR：" class="headerlink" title="错误ERROR："></a>错误ERROR：</h5><p>错误不是异常，而是脱离程序员控制的问题，错误在代码中通常被忽略，例如当栈溢出时一个错误就发生了，它们在编译时也检查不到的</p><h3 id="异常结构体系"><a href="#异常结构体系" class="headerlink" title="异常结构体系"></a>异常结构体系</h3><p>Java把异常当作对象来处理，并定义一个基类<code>java.lang.Throwable</code>作为所有异常的超类</p><p>在Java API 中已经定义了许多异常类，这些异常类分为两大类，<strong>错误Error</strong>和异常Exception</p><h5 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h5><p>Error类对象由java虚拟机生成并抛出，大多数错误与代码编写者所执行的操作无关</p><p>JVM运行错误，当JVM不再有继续执行操作所需的内存资源时，将出现<strong>OutofMemoryError</strong>，这些异常发生时，JVM一般会选择线程终止</p><p>还有发生在虚拟机试图执行应用时，如类定义错误（NoClassDefFoundError）、连接错误（LinkageError），这些错误是不可查的，因为它们在应用程序的控制和处理能力之外，而且绝大多数是程序运行时不允许出现的状况。</p><h5 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h5><p>在Exception分支中有一个重要的子类RuntimeException（运行时异常）</p><ul><li>ArrayIndexOutOfBoundsException（数组下标越界异常）</li><li>NullPointerException（空指针异常）</li><li>ArithmeticException（算数异常）</li><li>MissingResourceException（丢失资源）</li><li>ClassNotFoundException（找不到类）</li></ul><p>等异常，这些异常时不检查异常，程序中可以选择捕获处理，也可以不处理</p><p>这些异常一般是由程序逻辑错误引起的，程序应该从逻辑角度尽可能避免这类异常的发生</p><p>Error和Exception的区别：Error通常时灾难性的致命错误，是程序无法控制和处理的，当出现这些异常时，JVM一般会选择终止线程。Exception异常通常情况下时可以被程序处理的，并且在程序中应该尽可能的去处理这些异常</p><h3 id="异常处理机制"><a href="#异常处理机制" class="headerlink" title="异常处理机制"></a>异常处理机制</h3><h5 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h5><h5 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h5><h5 id="异常处理五个关键字"><a href="#异常处理五个关键字" class="headerlink" title="异常处理五个关键字"></a>异常处理五个关键字</h5><ul><li>try    catch    finally    throw    throws</li></ul><p>try、catch、finally 用法如下</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br><br>        <span class="hljs-comment">//假设要捕获多个异常：  从小到大！</span><br><br>        <span class="hljs-keyword">try</span> &#123;<span class="hljs-comment">//代码块  try监控区域</span><br>            System.out.println(a/b);<br>        &#125;<span class="hljs-keyword">catch</span>(Error e)&#123;<span class="hljs-comment">//catch(想要捕获的异常类型)捕获异常</span><br>            System.out.println(<span class="hljs-string">&quot;Error&quot;</span>);<br>        &#125;<span class="hljs-keyword">catch</span> (Exception e)&#123;<br>            System.out.println(<span class="hljs-string">&quot;Exception&quot;</span>);<br>        &#125;<span class="hljs-keyword">catch</span> (Throwable t)&#123;<br>            System.out.println(<span class="hljs-string">&quot;Throwable&quot;</span>);<br>        &#125; <span class="hljs-keyword">finally</span> &#123;<span class="hljs-comment">//处理善后工作</span><br>            System.out.println(<span class="hljs-string">&quot;finally&quot;</span>);<br>        &#125;<br><br>        <span class="hljs-comment">//finally  可以不要finally，  假设IO， 资源， 关闭！</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>throws用来声明一个方法可能抛出的所有异常信息，throw用来主动抛出一个具体的异常类型</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> <span class="hljs-keyword">throws</span> ArithmeticException&#123;<br>    <span class="hljs-keyword">if</span>(b==<span class="hljs-number">0</span>)&#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArithmeticException</span>();<span class="hljs-comment">//主动抛出异常，一般在方法中使用</span><br>    &#125;<br>    System.out.println(<span class="hljs-string">&quot;a/b&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure><h3 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h3><p>使用java内置的异常类可以描述在编程时出现的大部分异常情况，除此之外，用户还可以自定义异常，用户自定义异常类，只需继承Exception类即可</p><p>在程序中使用自定义异常类，大体可以分为以下几个步骤</p><ol><li>创建自定义异常类</li><li>在方法中通过throw关键字抛出异常对象</li><li>如果在当前抛出异常的方法中处理异常，可以使用try-catch语句捕获并处理；否则在方法的声明处通过throws关键字知名要抛出给方法调用者的异常，继续进行下一步操作</li><li>在出现异常方法的调用者中捕获并处理异常</li></ol><h3 id="实际应用中的经验总结"><a href="#实际应用中的经验总结" class="headerlink" title="实际应用中的经验总结"></a>实际应用中的经验总结</h3><ul><li>处理运行异常时，采用逻辑去合理规避同时辅助try-catch处理</li><li>在多重catch块后面，可以加一个catch(Exception)来处理可能会被遗漏的异常</li><li>对于不确定的代码，也可以加上try-catch处理潜在的异常</li><li>尽量去处理异常，切忌知识简单地调用printStackTrace()去打印输出</li><li>具体如何处理异常，要根据不同的业务需求和异常类型去决定</li><li>尽量添加finally语句块去释放占用的资源</li></ul><p>总结：完全不明白，只是很模糊的知道异常可以用try-catch捕获处理</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;异常&quot;&gt;&lt;a href=&quot;#异常&quot; class=&quot;headerlink&quot; title=&quot;异常&quot;&gt;&lt;/a&gt;异常&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;注：狂神的这节课讲的相当烂，看完了之后还是完全不明白是什么概念&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;什么是异常&quot;&gt;&lt;a</summary>
+      
+    
+    
+    
+    <category term="日常记录" scheme="http://example.com/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="java基础" scheme="http://example.com/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="java基础学习" scheme="http://example.com/tags/java%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>面向对象</title>
