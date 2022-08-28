@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-28T06:30:12.141Z</updated>
+  <updated>2022-08-28T11:18:22.143Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Exception重制版</title>
+    <link href="http://example.com/2022/08/28/2022-08-28-Exception%E9%87%8D%E5%88%B6%E7%89%88/"/>
+    <id>http://example.com/2022/08/28/2022-08-28-Exception%E9%87%8D%E5%88%B6%E7%89%88/</id>
+    <published>2022-08-28T11:00:00.000Z</published>
+    <updated>2022-08-28T11:18:22.143Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于狂神的异常讲的实在是太烂了，为了好好学习我更换了韩顺平老师的课程，的确有非常多的地方讲的比狂神好很多，更细致也更深入，所以从此以后的课程（包括内部类&amp;注解那一篇）都是根据韩顺平老师的课程来编写。</p><h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p>如果程序员认为一段代码可能出现异常，可以使用try-catch异常处理机制来解决，从而保证程序的<strong>健壮性</strong>。如果使用了异常处理，那么即使出现了异常，程序继续进行。</p><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>java语言中，将程序执行中发生的不正常情况成为”异常“。（开发过程中语法错误和逻辑错误不是异常）</p><p>执行过程中发生的异常事件可分为两大类：</p><ul><li>Error（错误）：java虚拟机无法解决的严重问题， 如：JVM系统内部错误，资源耗尽等情况。Error是严重错误，会导致程序崩溃</li><li>Exception（异常）：其他因编程错误或偶然的外在因素导致的一般性问题，可以使用针对性的代码进行处理。例如：空指针访问，试图读取不存在的文件，网络连接中断等等，Exception分为两大类：<strong>运行异常</strong>和<strong>编译时异常</strong></li></ul><p><img src="https://pic1.zhimg.com/80/v2-bcab256599f18d02e5f53a1d272a4220_720w.png" alt="异常体系图"></p><h5 id="异常体系图小结："><a href="#异常体系图小结：" class="headerlink" title="异常体系图小结："></a>异常体系图小结：</h5><ul><li>异常分为两大类：运行时异常和编译时异常</li><li>运行时异常，编译器不要求强制处理的异常，一般是编程时的逻辑错误，时程序员应该避免出现的异常</li><li>对于运行时异常可以不做处理，因为这类异常太普遍，如果全处理可能会对程序的可读性和运行效率产生影响</li><li>编译时异常，是编译器要求必须处理的异常</li></ul><h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>异常处理就是当异常发生时，对异常的处理方式</p><h5 id="异常处理的方式"><a href="#异常处理的方式" class="headerlink" title="异常处理的方式"></a>异常处理的方式</h5><ul><li>try-catch-finally程序员在代码中捕获发生的异常，自行处理</li><li>throws将发生的异常抛出，交给调用者（方法）来处理，最顶级的处理者就是JVM</li></ul><h5 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h5><p><img src="https://pic3.zhimg.com/80/v2-59174a266c677e6c9e72051bb612e25d_720w.png" alt="try-catch-finally处理示意图"></p><p><img src="https://pic1.zhimg.com/80/v2-820afcfa37cdadae44ac0235d2bdf985_720w.png" alt="throws处理示意图"></p><h5 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h5><ul><li><p>如果没有try-catch-finally和throws，会默认向上throws</p></li><li><p>try-catch-finally语句可以有多个catch，子类异常应该在父类异常之前</p></li><li><p>可以try-finally配合使用，相当于没有捕获异常，因此程序会直接崩溃/退出。应用场景：执行一段代码，不管是否发生异常，都必须执行某个业务逻辑</p></li></ul><h5 id="try-catch-finally执行顺序小结"><a href="#try-catch-finally执行顺序小结" class="headerlink" title="try-catch-finally执行顺序小结"></a>try-catch-finally执行顺序小结</h5><ul><li>如果没有出现异常，则执行try中所有语句，不执行catch块中语句，如果有finally，最后还要执行finally里面的语句</li><li>如果出现异常，则try块中发生异常后，try块剩下的语句不再执行，将执行catch块中的语句，如果有finally，最后还要执行finally中的语句</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;由于狂神的异常讲的实在是太烂了，为了好好学习我更换了韩顺平老师的课程，的确有非常多的地方讲的比狂神好很多，更细致也更深入，所以从此以后的课程（包括内部类&amp;amp;注解那一篇）都是根据韩顺平老师的课程来编写。&lt;/p&gt;
+&lt;h1 id=&quot;异常&quot;&gt;&lt;a href=&quot;#异常&quot; cla</summary>
+      
+    
+    
+    
+    <category term="日常记录" scheme="http://example.com/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="java基础" scheme="http://example.com/categories/%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="java基础学习" scheme="http://example.com/tags/java%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>内部类&amp;注解</title>

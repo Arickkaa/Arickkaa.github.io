@@ -16,22 +16,26 @@
   <meta name="author" content="Aric">
   <meta name="keywords" content="">
   
-    <meta name="description" content="内部类基本介绍一个类的内部又完整地嵌套了另一个类的结构，被嵌套的类成为内部类(inner class)，嵌套其他类的类称为外部类(outer class)。是我们类的第五大成员 类的五大成员：属性、方法、构造器、代码块、内部类 内部类的最大特点就是可以直接访问私有属性，并且可以体现类与类之间的包含关系 内部类的学习是难点，同时也是重点 内部类的分类 定义在外部类局部位置上（比如方法体内）   局部">
+    <meta name="description" content="由于狂神的异常讲的实在是太烂了，为了好好学习我更换了韩顺平老师的课程，的确有非常多的地方讲的比狂神好很多，更细致也更深入，所以从此以后的课程（包括内部类&amp;注解那一篇）都是根据韩顺平老师的课程来编写。 异常如果程序员认为一段代码可能出现异常，可以使用try-catch异常处理机制来解决，从而保证程序的健壮性。如果使用了异常处理，那么即使出现了异常，程序继续进行。 基本概念java语言中，将程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="内部类&amp;注解">
-<meta property="og:url" content="http://example.com/2022/08/28/2022-08-27%E5%86%85%E9%83%A8%E7%B1%BB/index.html">
+<meta property="og:title" content="Exception重制版">
+<meta property="og:url" content="http://example.com/2022/08/28/2022-08-28-Exception%E9%87%8D%E5%88%B6%E7%89%88/index.html">
 <meta property="og:site_name" content="Aric&#39;s Blog">
-<meta property="og:description" content="内部类基本介绍一个类的内部又完整地嵌套了另一个类的结构，被嵌套的类成为内部类(inner class)，嵌套其他类的类称为外部类(outer class)。是我们类的第五大成员 类的五大成员：属性、方法、构造器、代码块、内部类 内部类的最大特点就是可以直接访问私有属性，并且可以体现类与类之间的包含关系 内部类的学习是难点，同时也是重点 内部类的分类 定义在外部类局部位置上（比如方法体内）   局部">
+<meta property="og:description" content="由于狂神的异常讲的实在是太烂了，为了好好学习我更换了韩顺平老师的课程，的确有非常多的地方讲的比狂神好很多，更细致也更深入，所以从此以后的课程（包括内部类&amp;注解那一篇）都是根据韩顺平老师的课程来编写。 异常如果程序员认为一段代码可能出现异常，可以使用try-catch异常处理机制来解决，从而保证程序的健壮性。如果使用了异常处理，那么即使出现了异常，程序继续进行。 基本概念java语言中，将程">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-08-28T07:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-28T06:30:12.141Z">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-bcab256599f18d02e5f53a1d272a4220_720w.png">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-59174a266c677e6c9e72051bb612e25d_720w.png">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-820afcfa37cdadae44ac0235d2bdf985_720w.png">
+<meta property="article:published_time" content="2022-08-28T11:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-28T11:18:22.143Z">
 <meta property="article:author" content="Aric">
 <meta property="article:tag" content="java基础学习">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pic1.zhimg.com/80/v2-bcab256599f18d02e5f53a1d272a4220_720w.png">
   
   
   
-  <title>内部类&amp;注解 - Aric&#39;s Blog</title>
+  <title>Exception重制版 - Aric&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="内部类&amp;注解"></span>
+            <span id="subtitle" data-typed-text="Exception重制版"></span>
           
         </div>
 
@@ -208,7 +212,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-08-28 15:00" pubdate>
+        <time datetime="2022-08-28 19:00" pubdate>
           August 28, 2022 pm
         </time>
       </span>
@@ -220,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.5k words
+          1k words
         
       </span>
     
@@ -231,7 +235,7 @@
         
         
         
-          21 mins
+          9 mins
         
       </span>
     
@@ -269,125 +273,45 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">内部类&amp;注解</h1>
+            <h1 style="display: none">Exception重制版</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>一个类的内部又完整地嵌套了另一个类的结构，被嵌套的类成为内部类(inner class)，嵌套其他类的类称为外部类(outer class)。是我们类的第五大成员</p>
-<p><strong>类的五大成员：</strong>属性、方法、构造器、代码块、内部类</p>
-<p>内部类的最大特点就是可以直接访问私有属性，并且可以体现类与类之间的包含关系</p>
-<p><strong><em>内部类的学习是难点，同时也是重点</em></strong></p>
-<h3 id="内部类的分类"><a href="#内部类的分类" class="headerlink" title="内部类的分类"></a>内部类的分类</h3><ul>
-<li>定义在外部类局部位置上（比如方法体内）</li>
-</ul>
-<ol>
-<li>局部内部类（有类名）</li>
-<li><strong>匿名内部类（没有类名，重点！）</strong></li>
-</ol>
+                <p>由于狂神的异常讲的实在是太烂了，为了好好学习我更换了韩顺平老师的课程，的确有非常多的地方讲的比狂神好很多，更细致也更深入，所以从此以后的课程（包括内部类&amp;注解那一篇）都是根据韩顺平老师的课程来编写。</p>
+<h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p>如果程序员认为一段代码可能出现异常，可以使用try-catch异常处理机制来解决，从而保证程序的<strong>健壮性</strong>。如果使用了异常处理，那么即使出现了异常，程序继续进行。</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>java语言中，将程序执行中发生的不正常情况成为”异常“。（开发过程中语法错误和逻辑错误不是异常）</p>
+<p>执行过程中发生的异常事件可分为两大类：</p>
 <ul>
-<li>定义在外部类的成员位置上</li>
+<li>Error（错误）：java虚拟机无法解决的严重问题， 如：JVM系统内部错误，资源耗尽等情况。Error是严重错误，会导致程序崩溃</li>
+<li>Exception（异常）：其他因编程错误或偶然的外在因素导致的一般性问题，可以使用针对性的代码进行处理。例如：空指针访问，试图读取不存在的文件，网络连接中断等等，Exception分为两大类：<strong>运行异常</strong>和<strong>编译时异常</strong></li>
 </ul>
-<ol>
-<li>成员内部类（没用用static修饰）</li>
-<li>静态内部类（用static修饰）</li>
-</ol>
-<h5 id="局部内部类"><a href="#局部内部类" class="headerlink" title="局部内部类"></a>局部内部类</h5><p>说明：局部内部类是定义在外部类的局部位置中，比如方法中，并且有类名</p>
-<ol>
-<li>可以直接访问外部类的所欲哦成员，包括私有的</li>
-<li>不能添加访问修饰符，因为它的地位就是一个局部变量。局部变量不能使用修饰符，但是可以使用final修饰，因为局部变量也可以是final</li>
-<li>作用域：仅仅在定义他的方法或代码块中</li>
-<li>局部内部类访问外部类的成员方式：直接访问</li>
-<li>外部类访问局部内部类的方式：创建对象，再访问</li>
-<li>外部其他类不能访问局部内部类（因为局部内部类的地位是一个局部变量）</li>
-<li><strong>如果外部类和局部内部类的成员重名时，默认遵循就近原则，如果想访问外部类的成员可以使用（外部类名.this.成员）去访问（<em>以下所有内部类都遵循此原则</em>）</strong></li>
-</ol>
-<p>记住：</p>
-<ul>
-<li>局部内部类定义在方法中/代码块</li>
-<li>作用于在方法体或则和代码块中</li>
-<li>本质仍然是一个类</li>
+<p><img src="https://pic1.zhimg.com/80/v2-bcab256599f18d02e5f53a1d272a4220_720w.png" srcset="/img/loading.gif" lazyload alt="异常体系图"></p>
+<h5 id="异常体系图小结："><a href="#异常体系图小结：" class="headerlink" title="异常体系图小结："></a>异常体系图小结：</h5><ul>
+<li>异常分为两大类：运行时异常和编译时异常</li>
+<li>运行时异常，编译器不要求强制处理的异常，一般是编程时的逻辑错误，时程序员应该避免出现的异常</li>
+<li>对于运行时异常可以不做处理，因为这类异常太普遍，如果全处理可能会对程序的可读性和运行效率产生影响</li>
+<li>编译时异常，是编译器要求必须处理的异常</li>
 </ul>
-<h5 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h5><p>说明：实际上就是一个匿名的子类，使用匿名内部类可以来简化开发</p>
-<ol>
-<li>本质是类</li>
-<li>内布列</li>
-<li>该类没有名字</li>
-<li>同时还是一个对象</li>
-</ol>
-<p>使用： </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">new</span> 类或接口（参数列表） &#123;<br>		类体<br>&#125;;<br></code></pre></td></tr></table></figure>
-<p>匿名内部类比较奇特，请大家注意，因为匿名内部类即使一个类的定义，其本身有是一个对象，从语法上看：它既有定义类的特征，又有创建对象的特征，因此可以调用匿名内部类的方法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">new</span> <span class="hljs-title class_">A</span>()&#123;<br>    <span class="hljs-meta">@override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">cry</span><span class="hljs-params">()</span>&#123;<br>        System.out.println(<span class="hljs-string">&quot;Cry&quot;</span>);<br>	&#125;<br>&#125;.cry();<br></code></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">A</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">A</span>()&#123;<br>    <span class="hljs-meta">@override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">cry</span><span class="hljs-params">()</span>&#123;<br>        System.out.printn(<span class="hljs-string">&quot;Hello&quot;</span>);<br>    &#125;<br>&#125;;<br>a.cry();<br></code></pre></td></tr></table></figure>
-<p>大部分特性与局部内部类相似。</p>
-<h5 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h5><p>说明：成员内部类是定义在外部类的成员位置，并且没有static修饰</p>
-<ol>
-<li>可以直接访问外部类的所有成员，包括私有的（属性、方法）</li>
-<li><p>可以添加任意修饰符，因为它的地位就是一个成员</p>
-</li>
-<li><p><strong>最大特点：成员内部类定义在外部类的成员变量位置</strong></p>
-</li>
-<li><p>作用域：和外部类的其他成员一样，为整个类体</p>
-</li>
-</ol>
-<h5 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h5><p>说明：静态内部类是定义在外部类的成员位置，并且有static修饰</p>
-<ol>
-<li>放在外部类的成员位置</li>
-<li>使用static修饰</li>
-<li>可以直接访问外部类的所有静态成员，包括私有的，但不能直接访问非静态成员</li>
-<li>可以添加任何修饰符，因为它的地位本身就是一个成员（public protected private）</li>
-<li>作用域：同其他成员，为整个整体</li>
-</ol>
-<p>外部类访问静态内部类的方法：先创建对象再访问</p>
-<p>外部其他类访问：</p>
-<ol>
-<li><p>通过外部类名.内部类名创建对象实例</p>
-</li>
-<li><p>编写一个方法返回一个静态内部类的实例化对象，调用方法来访问</p>
-</li>
-<li><p>如果外部类和局部内部类的成员重名时，默认遵循就近原则，如果想访问外部类的成员可以使用（外部类名.成员）去访问</p>
-</li>
-</ol>
-<h1 id="注解（Annotation）"><a href="#注解（Annotation）" class="headerlink" title="注解（Annotation）"></a>注解（Annotation）</h1><p>用于修饰解释包、类、方法、属性、构造器、局部变量等数据信息</p>
-<p>和注释一样，注释不影响程序逻辑，但注解可以被编译或运行，相当于嵌入在代码中的补充信息</p>
-<p>在JavaSE中，注解的使用目的比较简单，例如标记过时的功能，忽略警告等。在JavaSE中注解占据了更重要的角色，例如用来配置应用程序的任何切面，代替javaEE旧版中所遗留的繁冗代码和XML配置等等</p>
-<h3 id="基本的Annotation介绍"><a href="#基本的Annotation介绍" class="headerlink" title="基本的Annotation介绍"></a>基本的Annotation介绍</h3><p>三个基本的Annotation：</p>
-<ol>
-<li>@Override：用于限制某个方法，表示它是父类的重写，该注解只用于方法</li>
-<li>@Deprecated：用于表示某个程序原色（类、方法等等）已经过时</li>
-<li>@SuppressWarnings：抑制编译器警告</li>
-</ol>
-<p>补充说明：@interface是一个注解类不是接口</p>
-<h5 id="Override使用说明："><a href="#Override使用说明：" class="headerlink" title="@Override使用说明："></a>@Override使用说明：</h5><ul>
-<li><p>@Override表示指定重写父类的方法（从编译层面认证），如果父类没有fly方法，则会报错</p>
-</li>
-<li><p>如过不写@Override注解，而父类仍有public void fly(){}，仍构成重写</p>
-</li>
-<li>@Override只能修饰方法，不能修饰其他类、包、属性等</li>
-<li>查看@Override源码为：@Target(ElementType.METHOD)，说明只能修饰方法</li>
-<li>@Target是修饰注解的注解，称为元注解</li>
+<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>异常处理就是当异常发生时，对异常的处理方式</p>
+<h5 id="异常处理的方式"><a href="#异常处理的方式" class="headerlink" title="异常处理的方式"></a>异常处理的方式</h5><ul>
+<li>try-catch-finally程序员在代码中捕获发生的异常，自行处理</li>
+<li>throws将发生的异常抛出，交给调用者（方法）来处理，最顶级的处理者就是JVM</li>
 </ul>
-<h5 id="Depecated说明："><a href="#Depecated说明：" class="headerlink" title="@Depecated说明："></a>@Depecated说明：</h5><ul>
-<li>用于表示某个元素(类、方法等)已经过时</li>
-<li>可以修饰方法、类、字段、包、参数等等</li>
-<li>@Target(value = {CONSTRUCTOR, FIELD, LOCAL_VARIABLE, METHOD, PACKAGE, PARAMETER, TYPE})</li>
-<li>@Deprecated的作用可以做到新旧版本的兼容和过渡</li>
+<h5 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h5><p><img src="https://pic3.zhimg.com/80/v2-59174a266c677e6c9e72051bb612e25d_720w.png" srcset="/img/loading.gif" lazyload alt="try-catch-finally处理示意图"></p>
+<p><img src="https://pic1.zhimg.com/80/v2-820afcfa37cdadae44ac0235d2bdf985_720w.png" srcset="/img/loading.gif" lazyload alt="throws处理示意图"></p>
+<h5 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h5><ul>
+<li><p>如果没有try-catch-finally和throws，会默认向上throws</p>
+</li>
+<li><p>try-catch-finally语句可以有多个catch，子类异常应该在父类异常之前</p>
+</li>
+<li><p>可以try-finally配合使用，相当于没有捕获异常，因此程序会直接崩溃/退出。应用场景：执行一段代码，不管是否发生异常，都必须执行某个业务逻辑</p>
+</li>
 </ul>
-<h5 id="SuppressWarnings说明"><a href="#SuppressWarnings说明" class="headerlink" title="@SuppressWarnings说明"></a>@SuppressWarnings说明</h5><ul>
-<li>当不想看到Warning信息的时候可以使用@SuppressWarnings来抑制警告信息</li>
-<li>@SuppressWarnings有很多参数，要使用的时候可以查询</li>
-<li>@SuppressWarnings作用范围和放置的位置相关，很好理解，在要抑制的语句之前就好</li>
-<li>@SuppressWarnings 的 可以放置 的位置有：TYPE, FIELD, METHOD, PARAMETER, CONSTRUCTOR, LOCAL_VARIABLE, MODULE</li>
+<h5 id="try-catch-finally执行顺序小结"><a href="#try-catch-finally执行顺序小结" class="headerlink" title="try-catch-finally执行顺序小结"></a>try-catch-finally执行顺序小结</h5><ul>
+<li>如果没有出现异常，则执行try中所有语句，不执行catch块中语句，如果有finally，最后还要执行finally里面的语句</li>
+<li>如果出现异常，则try块中发生异常后，try块剩下的语句不再执行，将执行catch块中的语句，如果有finally，最后还要执行finally中的语句</li>
 </ul>
-<h3 id="元注解基本介绍"><a href="#元注解基本介绍" class="headerlink" title="元注解基本介绍"></a>元注解基本介绍</h3><p>JDK的元Annotation用于修饰其他Annotation</p>
-<p>元注解：本身作用不大，看源码的时候知道它是干什么的就好</p>
-<h5 id="元注解的种类"><a href="#元注解的种类" class="headerlink" title="元注解的种类"></a>元注解的种类</h5><ol>
-<li>Retention 指定注解的作用范围，三种：SOUCE, CLASS, RUNTIME</li>
-<li>Target 指定注解可以在哪些地方使用</li>
-<li>Documented 指定该注解是否会在javadoc体现</li>
-<li>Inherited 子类会继承父类注解</li>
-</ol>
 
                 
               </div>
@@ -440,8 +364,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>内部类&amp;注解</div>
-      <div>http://example.com/2022/08/28/2022-08-27内部类/</div>
+      <div>Exception重制版</div>
+      <div>http://example.com/2022/08/28/2022-08-28-Exception重制版/</div>
     </div>
     <div class="license-meta">
       
@@ -483,18 +407,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/08/28/2022-08-28-Exception%E9%87%8D%E5%88%B6%E7%89%88/" title="Exception重制版">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Exception重制版</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/08/26/2022-08-26%E5%85%B1%E4%BA%AB%E5%8D%95%E8%BD%A6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" title="第一个小项目：共享单车管理系统">
-                        <span class="hidden-mobile">第一个小项目：共享单车管理系统</span>
+                      <a href="/2022/08/28/2022-08-27%E5%86%85%E9%83%A8%E7%B1%BB/" title="内部类&amp;注解">
+                        <span class="hidden-mobile">内部类&amp;注解</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
