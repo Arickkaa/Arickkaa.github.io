@@ -44,7 +44,7 @@
 <meta property="og:image" content="https://pic3.zhimg.com/80/v2-e23554f4c5f55f297756a65cf1b0cf7c_1440w.png">
 <meta property="og:image" content="https://pic1.zhimg.com/80/v2-52e52fd07cc32c40f7f0ef69422f9bb7_1440w.png">
 <meta property="article:published_time" content="2022-08-31T02:43:12.765Z">
-<meta property="article:modified_time" content="2022-08-31T05:19:17.744Z">
+<meta property="article:modified_time" content="2022-08-31T23:51:31.666Z">
 <meta property="article:author" content="Aric">
 <meta property="article:tag" content="matlab小作业">
 <meta name="twitter:card" content="summary_large_image">
@@ -252,7 +252,7 @@
         
         
         
-          172 mins
+          173 mins
         
       </span>
     
@@ -330,7 +330,7 @@
 <li>各项功能代码演示</li>
 </ul>
 <p>数字的输入：</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs matlab"><span class="hljs-keyword">if</span>(app.Label.Text(<span class="hljs-number">1</span>) ~= <span class="hljs-string">&#x27;0&#x27;</span> || <span class="hljs-built_in">length</span>(app.Label.Text)~=<span class="hljs-number">1</span>)<br>             app.Label.Text = strcat(app.Label.Text, <span class="hljs-string">&#x27;0&#x27;</span>);<br>         <span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs matlab"><span class="hljs-keyword">if</span>(app.Label.Text(<span class="hljs-number">1</span>) ~= <span class="hljs-string">&#x27;0&#x27;</span> || <span class="hljs-built_in">length</span>(app.Label.Text)~=<span class="hljs-number">1</span>)<br>             app.Label.Text = strcat(app.Label.Text, <span class="hljs-string">&#x27;0&#x27;</span>);<br>         <span class="hljs-keyword">end</span><br>         <br>         <span class="hljs-keyword">if</span>(app.Label.Text(<span class="hljs-number">1</span>) ~= <span class="hljs-string">&#x27;0&#x27;</span> || <span class="hljs-built_in">length</span>(app.Label.Text)~=<span class="hljs-number">1</span>)<br>             app.Label.Text = strcat(app.Label.Text, <span class="hljs-string">&#x27;1&#x27;</span>);<br>         <span class="hljs-keyword">else</span><br>             app.Label.Text(<span class="hljs-number">1</span>) = <span class="hljs-string">&#x27;1&#x27;</span><br>         <span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
 <p>小数点的输入：</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs matlab"><span class="hljs-keyword">if</span>(app.Label.Text(<span class="hljs-built_in">length</span>(app.Label.Text))&gt;=<span class="hljs-string">&#x27;0&#x27;</span> &amp;&amp; app.Label.Text(<span class="hljs-built_in">length</span>(app.Label.Text))&lt;=<span class="hljs-string">&#x27;9&#x27;</span> &amp;&amp; app.flag == <span class="hljs-number">0</span>)<br>                app.Label.Text = strcat(app.Label.Text, <span class="hljs-string">&#x27;.&#x27;</span>);<br>                app.flag = <span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
 <p>运算符（加减乘除）的输入：</p>
