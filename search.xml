@@ -146,7 +146,7 @@
       </tags>
   </entry>
   <entry>
-    <title>ABC284题解</title>
+    <title>AtCoder Beginner Contest 284题解</title>
     <url>/2023/01/07/2023-01-07-AtCoder-Beginner-Contest-284-%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<h2 id="AtCoder-Beginner-Contest-284"><a href="#AtCoder-Beginner-Contest-284" class="headerlink" title="AtCoder Beginner Contest 284"></a>AtCoder Beginner Contest 284</h2><span id="more"></span>
 <h4 id="A-Sequence-of-Strings"><a href="#A-Sequence-of-Strings" class="headerlink" title="A - Sequence of Strings"></a>A - Sequence of Strings</h4><p>直接用一个string数组存储输入，再逆序输出即可</p>
