@@ -71,7 +71,7 @@
   </entry>
   <entry>
     <title>Codeforces Round 823 (Div. 2)题解</title>
-    <url>/2023/01/14/CF823(Div.2)%E9%A2%98%E8%A7%A3/</url>
+    <url>/2023/01/11/CF823(Div.2)%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<h3 id="Codeforces-Round-823-Div-2"><a href="#Codeforces-Round-823-Div-2" class="headerlink" title="Codeforces Round #823 (Div. 2)"></a><a href="https://codeforces.com/contest/1730">Codeforces Round #823 (Div. 2)</a></h3><span id="more"></span>
 <h4 id="A-Planets"><a href="#A-Planets" class="headerlink" title="A. Planets"></a><a href="https://codeforces.com/contest/1730/problem/A">A. Planets</a></h4><p>简单的贪心问题</p>
 <p><strong>Solution(C++):</strong></p>
