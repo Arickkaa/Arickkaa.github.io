@@ -64,29 +64,32 @@
   };
 </script>
 
-  <meta name="description" content="welcome to my blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Aric&#39;s Blog">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="问题 A: 数列排序题目分析： 直接使用sort函数对数组进行排序即可。 12345678910111213141516void solve(){    int n;    cin &gt;&gt; n;    for (int i &#x3D; 0; i &lt; n; i ++ )    {        cin &gt;&gt; a[i];    }    sort(a, a + n);    for">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2.10排位赛题解">
+<meta property="og:url" content="http://example.com/2023/02/10/2.10%E6%8E%92%E4%BD%8D%E8%B5%9B%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Aric&#39;s Blog">
-<meta property="og:description" content="welcome to my blog">
+<meta property="og:description" content="问题 A: 数列排序题目分析： 直接使用sort函数对数组进行排序即可。 12345678910111213141516void solve(){    int n;    cin &gt;&gt; n;    for (int i &#x3D; 0; i &lt; n; i ++ )    {        cin &gt;&gt; a[i];    }    sort(a, a + n);    for">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-02-10T14:00:00.000Z">
+<meta property="article:modified_time" content="2023-02-10T14:00:00.000Z">
 <meta property="article:author" content="Aric">
+<meta property="article:tag" content="Buctoj">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2023/02/10/2.10%E6%8E%92%E4%BD%8D%E8%B5%9B%E9%A2%98%E8%A7%A3/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false
+    isHome: false,
+    isPost: true
   };
 </script>
 
-  <title>Aric's Blog</title>
+  <title>2.10排位赛题解 | Aric's Blog</title>
   
 
 
@@ -338,10 +341,10 @@ mjx-container[display="true"] + br {
             
 
   <div class="posts-expand">
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/10/2.10%E6%8E%92%E4%BD%8D%E8%B5%9B%E9%A2%98%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -355,8 +358,7 @@ mjx-container[display="true"] + br {
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/10/2.10%E6%8E%92%E4%BD%8D%E8%B5%9B%E9%A2%98%E8%A7%A3/" class="post-title-link" itemprop="url">2.10排位赛题解</a>
+          2.10排位赛题解
         </h1>
 
         <div class="post-meta">
@@ -381,7 +383,14 @@ mjx-container[display="true"] + br {
                 </span>
             </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="Symbols count in article">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
@@ -406,7 +415,7 @@ mjx-container[display="true"] + br {
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="问题-A-数列排序"><a href="#问题-A-数列排序" class="headerlink" title="问题 A: 数列排序"></a>问题 A: 数列排序</h4><p><strong>题目分析：</strong></p>
+        <h4 id="问题-A-数列排序"><a href="#问题-A-数列排序" class="headerlink" title="问题 A: 数列排序"></a>问题 A: 数列排序</h4><p><strong>题目分析：</strong></p>
 <p>直接使用sort函数对数组进行排序即可。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ )</span><br><span class="line">    {</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">sort</span>(a, a + n);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ )</span><br><span class="line">    {</span><br><span class="line">        cout &lt;&lt; a[i] &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">    }</span><br><span class="line">    cout &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <hr>
@@ -446,7 +455,6 @@ mjx-container[display="true"] + br {
 <p>直接按照题意进行模拟即可，最后答案为31626</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">getd</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> b = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= a / <span class="number">2</span>; i ++ )</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">        {</span><br><span class="line">            b += i;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> b;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000</span>; i ++ )</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">getd</span>(<span class="built_in">getd</span>(i)) == i &amp;&amp; <span class="built_in">getd</span>(i) != <span class="built_in">getd</span>(<span class="built_in">getd</span>(i))) ans += i;</span><br><span class="line">    }</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
@@ -454,706 +462,59 @@ mjx-container[display="true"] + br {
     
 
     
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------Thanks for reading-------------</div>
+    
+</div>
+      </div>
+    
+        <div class="reward-container">
+  <div>原创分享，您的支持将鼓励我继续创作</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="Aric WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="Aric Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/Buctoj/" rel="tag"># Buctoj</a>
+          </div>
 
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/14/CF826%20(Div.3)%E9%A2%98%E8%A7%A3/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jfif">
-      <meta itemprop="name" content="Aric">
-      <meta itemprop="description" content="welcome to my blog">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aric's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/14/CF826%20(Div.3)%E9%A2%98%E8%A7%A3/" class="post-title-link" itemprop="url">Codeforces Round 826 (Div. 3)题解</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2023-01-14 22:45:00 / Modified: 23:00:03" itemprop="dateCreated datePublished" datetime="2023-01-14T22:45:00+08:00">2023-01-14</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">题解</span>
-                  </a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>886</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Codeforces-Round-826-Div-3"><a href="#Codeforces-Round-826-Div-3" class="headerlink" title="Codeforces Round #826 (Div. 3)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1741">Codeforces Round #826 (Div. 3)</a></h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/14/CF826%20(Div.3)%E9%A2%98%E8%A7%A3/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/01/14/CF826%20(Div.3)%E9%A2%98%E8%A7%A3/" rel="prev" title="Codeforces Round 826 (Div. 3)题解">
+      <i class="fa fa-chevron-left"></i> Codeforces Round 826 (Div. 3)题解
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/13/CF2022~2023%E9%A2%98%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jfif">
-      <meta itemprop="name" content="Aric">
-      <meta itemprop="description" content="welcome to my blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aric's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/13/CF2022~2023%E9%A2%98%E8%A7%A3/" class="post-title-link" itemprop="url">Good Bye 2022:2023 is NEAR题解</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-01-13 22:45:00" itemprop="dateCreated datePublished" datetime="2023-01-13T22:45:00+08:00">2023-01-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-14 23:00:04" itemprop="dateModified" datetime="2023-01-14T23:00:04+08:00">2023-01-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">题解</span>
-                  </a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>389</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Good-Bye-2022-2023-is-NEAR题解"><a href="#Good-Bye-2022-2023-is-NEAR题解" class="headerlink" title="Good Bye 2022:2023 is NEAR题解"></a>Good Bye 2022:2023 is NEAR题解</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/13/CF2022~2023%E9%A2%98%E8%A7%A3/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/13/CF825(Div.2)%E9%A2%98%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jfif">
-      <meta itemprop="name" content="Aric">
-      <meta itemprop="description" content="welcome to my blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aric's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/13/CF825(Div.2)%E9%A2%98%E8%A7%A3/" class="post-title-link" itemprop="url">Codeforces Round 825 (Div. 2)题解</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-01-13 22:45:00" itemprop="dateCreated datePublished" datetime="2023-01-13T22:45:00+08:00">2023-01-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-14 23:00:02" itemprop="dateModified" datetime="2023-01-14T23:00:02+08:00">2023-01-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">题解</span>
-                  </a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>360</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Codeforces-Round-825-Div-2"><a href="#Codeforces-Round-825-Div-2" class="headerlink" title="Codeforces Round #825 (Div. 2)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1736">Codeforces Round #825 (Div. 2)</a></h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/13/CF825(Div.2)%E9%A2%98%E8%A7%A3/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/12/CF824(Div.2)%E9%A2%98%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jfif">
-      <meta itemprop="name" content="Aric">
-      <meta itemprop="description" content="welcome to my blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aric's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/12/CF824(Div.2)%E9%A2%98%E8%A7%A3/" class="post-title-link" itemprop="url">Codeforces Round 824 (Div. 2)题解</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-01-12 22:45:00" itemprop="dateCreated datePublished" datetime="2023-01-12T22:45:00+08:00">2023-01-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-14 23:00:01" itemprop="dateModified" datetime="2023-01-14T23:00:01+08:00">2023-01-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">题解</span>
-                  </a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>292</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Codeforces-Round-824-Div-2"><a href="#Codeforces-Round-824-Div-2" class="headerlink" title="Codeforces Round #824 (Div. 2)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1735">Codeforces Round #824 (Div. 2)</a></h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/12/CF824(Div.2)%E9%A2%98%E8%A7%A3/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/11/CF823(Div.2)%E9%A2%98%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jfif">
-      <meta itemprop="name" content="Aric">
-      <meta itemprop="description" content="welcome to my blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aric's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/11/CF823(Div.2)%E9%A2%98%E8%A7%A3/" class="post-title-link" itemprop="url">Codeforces Round 823 (Div. 2)题解</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-01-11 16:45:00" itemprop="dateCreated datePublished" datetime="2023-01-11T16:45:00+08:00">2023-01-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-14 23:00:00" itemprop="dateModified" datetime="2023-01-14T23:00:00+08:00">2023-01-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">题解</span>
-                  </a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>517</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Codeforces-Round-823-Div-2"><a href="#Codeforces-Round-823-Div-2" class="headerlink" title="Codeforces Round #823 (Div. 2)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1730">Codeforces Round #823 (Div. 2)</a></h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/11/CF823(Div.2)%E9%A2%98%E8%A7%A3/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/10/Edu136(Div.2)%E9%A2%98%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jfif">
-      <meta itemprop="name" content="Aric">
-      <meta itemprop="description" content="welcome to my blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aric's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/10/Edu136(Div.2)%E9%A2%98%E8%A7%A3/" class="post-title-link" itemprop="url">Educational Codeforces Round 136 (Rated for Div. 2)题解</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2023-01-10 22:45:00" itemprop="dateCreated datePublished" datetime="2023-01-10T22:45:00+08:00">2023-01-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-01-14 23:00:05" itemprop="dateModified" datetime="2023-01-14T23:00:05+08:00">2023-01-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">题解</span>
-                  </a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>556</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="Educational-Codeforces-Round-136-Rated-for-Div-2"><a href="#Educational-Codeforces-Round-136-Rated-for-Div-2" class="headerlink" title="Educational Codeforces Round 136 (Rated for Div. 2)"></a><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1739">Educational Codeforces Round 136 (Rated for Div. 2)</a></h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/10/Edu136(Div.2)%E9%A2%98%E8%A7%A3/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/01/07/2023-01-07-AtCoder-Beginner-Contest-284-%E9%A2%98%E8%A7%A3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jfif">
-      <meta itemprop="name" content="Aric">
-      <meta itemprop="description" content="welcome to my blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aric's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/07/2023-01-07-AtCoder-Beginner-Contest-284-%E9%A2%98%E8%A7%A3/" class="post-title-link" itemprop="url">AtCoder Beginner Contest 284题解</a>
-        </h1>
-
-        <div class="post-meta">
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2023-01-07 22:00:00 / Modified: 23:00:00" itemprop="dateCreated datePublished" datetime="2023-01-07T22:00:00+08:00">2023-01-07</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index">
-                    <span itemprop="name">题解</span>
-                  </a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>528</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="AtCoder-Beginner-Contest-284"><a href="#AtCoder-Beginner-Contest-284" class="headerlink" title="AtCoder Beginner Contest 284"></a>AtCoder Beginner Contest 284</h2>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/07/2023-01-07-AtCoder-Beginner-Contest-284-%E9%A2%98%E8%A7%A3/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
   </article>
   
   
   
 
   </div>
-
-  
-
 
 
           </div>
@@ -1204,6 +565,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-A-%E6%95%B0%E5%88%97%E6%8E%92%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">问题 A: 数列排序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-B-%E6%95%B0%E5%88%97%E7%89%B9%E5%BE%81"><span class="nav-number">2.</span> <span class="nav-text">问题 B: 数列特征</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-C-%E6%95%B0%E7%9A%84%E5%88%92%E5%88%86"><span class="nav-number">3.</span> <span class="nav-text">问题 C: 数的划分</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-D-%E6%95%B0%E7%9A%84%E8%AF%BB%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">问题 D: 数的读法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-E-%E6%98%8E%E6%98%8E%E7%9A%84%E7%83%A6%E6%81%BC"><span class="nav-number">5.</span> <span class="nav-text">问题 E: 明明的烦恼</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-G-%E6%8E%92%E5%88%97Perm"><span class="nav-number">6.</span> <span class="nav-text">问题 G: 排列Perm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-H-%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90"><span class="nav-number">7.</span> <span class="nav-text">问题 H: 生日快乐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-I-%E4%BA%B2%E5%92%8C%E6%95%B0"><span class="nav-number">8.</span> <span class="nav-text">问题 I: 亲和数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%97%AE%E9%A2%98-I-%E4%BA%B2%E5%92%8C%E6%95%B0-1"><span class="nav-number">9.</span> <span class="nav-text">问题 I: 亲和数</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
