@@ -396,7 +396,7 @@ mjx-container[display="true"] + br {
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>3.9k</span>
+              <span>990</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -454,6 +454,7 @@ mjx-container[display="true"] + br {
 <h4 id="问题-I-亲和数-1"><a href="#问题-I-亲和数-1" class="headerlink" title="问题 I: 亲和数"></a>问题 I: 亲和数</h4><p><strong>题目描述：</strong></p>
 <p>直接按照题意进行模拟即可，最后答案为31626</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">getd</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> b = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= a / <span class="number">2</span>; i ++ )</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">        {</span><br><span class="line">            b += i;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> b;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10000</span>; i ++ )</span><br><span class="line">    {</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">getd</span>(<span class="built_in">getd</span>(i)) == i &amp;&amp; <span class="built_in">getd</span>(i) != <span class="built_in">getd</span>(<span class="built_in">getd</span>(i))) ans += i;</span><br><span class="line">    }</span><br><span class="line">    cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<p><em>暂时还未完成所有题目，待续……</em></p>
 
     </div>
 
@@ -637,13 +638,13 @@ mjx-container[display="true"] + br {
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">7k</span>
+    <span title="Symbols count total">5k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">7 mins.</span>
+    <span title="Reading time total">16 mins.</span>
 </div>
   <!-- <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v6.3.0
   </div> -->
