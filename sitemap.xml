@@ -169,14 +169,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/Operating-System/</loc>
+    <loc>http://example.com/tags/codeforces/</loc>
     <lastmod>2023-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/codeforces/</loc>
+    <loc>http://example.com/tags/Operating-System/</loc>
     <lastmod>2023-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
