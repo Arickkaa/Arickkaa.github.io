@@ -72,7 +72,7 @@
 <meta property="og:description" content="ACM竞赛班训练二题解">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-03-22T14:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-23T04:01:53.077Z">
+<meta property="article:modified_time" content="2023-03-23T04:00:00.000Z">
 <meta property="article:author" content="Aric">
 <meta property="article:tag" content="Buctoj">
 <meta name="twitter:card" content="summary">
@@ -376,7 +376,7 @@ mjx-container[display="true"] + br {
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-23 12:01:53" itemprop="dateModified" datetime="2023-03-23T12:01:53+08:00">2023-03-23</time>
+                <time title="Modified: 2023-03-23 12:00:00" itemprop="dateModified" datetime="2023-03-23T12:00:00+08:00">2023-03-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -452,7 +452,7 @@ mjx-container[display="true"] + br {
 <p>首先每个单独的字符是成立的，ans最小为n。</p>
 <p>题目中的操作就是0左边的1可以去掉，1左边的0可以去掉，也就是如果第i个字符（从1开始）和前一个字符不相等，那么一定有i个长度大于1的连续子串是满足条件的，把它们加起来就是答案。</p>
 <p>解释——如果不相等就有i个长度大于1的连续子串符合：</p>
-<p>题意就是只要不相等就可以把前面一个字符消掉，那么只要出现了不同的字符，以这两个不相同的字符为结尾的所有字串都可以消掉（还不明白的再动动小脑经，试几个样例：10001110和1111110之类的）</p>
+<p>题意就是只要不相等就可以把前面一个字符消掉，那么只要出现了不同的字符，以这两个不相同的字符为结尾的所有字串都可以消掉（还不明白的再动动小脑筋，试几个样例：10001110和1111110之类的）</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n; string s; cin &gt;&gt; n &gt;&gt; s;</span><br><span class="line">    <span class="keyword">if</span> (s.<span class="built_in">find</span>(<span class="string">'1'</span>) == string::npos || s.<span class="built_in">find</span>(<span class="string">'0'</span>) == string::npos) {</span><br><span class="line">        cout &lt;&lt; n &lt;&lt; endl; <span class="keyword">return</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i ++ ) {</span><br><span class="line">        <span class="keyword">if</span> (s[i] != s[i - <span class="number">1</span>]) ans += i;</span><br><span class="line">    }    </span><br><span class="line">    cout &lt;&lt; ans + n &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <hr>
 <h4 id="f.-不想编了但还是得编的第六题">F.

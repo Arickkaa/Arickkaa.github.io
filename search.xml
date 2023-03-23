@@ -33,7 +33,7 @@
 <p>首先每个单独的字符是成立的，ans最小为n。</p>
 <p>题目中的操作就是0左边的1可以去掉，1左边的0可以去掉，也就是如果第i个字符（从1开始）和前一个字符不相等，那么一定有i个长度大于1的连续子串是满足条件的，把它们加起来就是答案。</p>
 <p>解释——如果不相等就有i个长度大于1的连续子串符合：</p>
-<p>题意就是只要不相等就可以把前面一个字符消掉，那么只要出现了不同的字符，以这两个不相同的字符为结尾的所有字串都可以消掉（还不明白的再动动小脑经，试几个样例：10001110和1111110之类的）</p>
+<p>题意就是只要不相等就可以把前面一个字符消掉，那么只要出现了不同的字符，以这两个不相同的字符为结尾的所有字串都可以消掉（还不明白的再动动小脑筋，试几个样例：10001110和1111110之类的）</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>{</span><br><span class="line">    <span class="type">int</span> n; string s; cin &gt;&gt; n &gt;&gt; s;</span><br><span class="line">    <span class="keyword">if</span> (s.<span class="built_in">find</span>(<span class="string">'1'</span>) == string::npos || s.<span class="built_in">find</span>(<span class="string">'0'</span>) == string::npos) {</span><br><span class="line">        cout &lt;&lt; n &lt;&lt; endl; <span class="keyword">return</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i ++ ) {</span><br><span class="line">        <span class="keyword">if</span> (s[i] != s[i - <span class="number">1</span>]) ans += i;</span><br><span class="line">    }    </span><br><span class="line">    cout &lt;&lt; ans + n &lt;&lt; endl;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <hr>
 <h4 id="f.-不想编了但还是得编的第六题">F.
